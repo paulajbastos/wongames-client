@@ -1,14 +1,17 @@
 {
   "name": "react-avancado-boilerplate",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "test": "jest --passWithNoTests",
-    "lint": "eslint src",
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "yarn build && next export",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\""
+    "lint": "eslint src --max-warnings=0",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public"
   },
   "dependencies": {
     "next": "10.0.0",
