@@ -7,6 +7,10 @@ const wrapperModifiers = {
   normal: () => css`
     width: 11rem;
     height: 3.3rem;
+
+    svg {
+      height: 100%;
+    }
   `,
 
   large: () => css`
