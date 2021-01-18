@@ -14,6 +14,7 @@ describe('<Slider />', () => {
 
     expect(
       screen.getByText(/item 1/i).parentElement?.parentElement
+      // ?. = se tiver o parentElement (pq pode vir undefined, por isso verifica antes se existe) entao pega o próximo parentElement
     ).toHaveClass('slick-slide')
 
     expect(
